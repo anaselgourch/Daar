@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
+import React from 'react';
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({

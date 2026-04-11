@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import BestSellers from "@/components/BestSellers";
 import { supplierProducts } from "@/data/products";
+import React from 'react';
 
 export default function Home() {
   return (

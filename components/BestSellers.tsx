@@ -2,6 +2,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import React from 'react';
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({

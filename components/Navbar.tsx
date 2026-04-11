@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import React from 'react';
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
