@@ -5,18 +5,26 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}", // Added src folder just in case
   ],
   theme: {
     extend: {
-      colors: {
-        daar: {
-          dark: "#0a0a0a",
-          gold: "#D4AF37",
-          gray: "#1f1f1f",
-        },
+      fontFamily: {
+        // This allows you to use font-playfair in Tailwind classes if needed
+        playfair: ['var(--font-playfair)'], 
       },
-    },
+      keyframes: {
+        reveal: {
+          '0%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(0)' },
+        }
+      },
+      animation: {
+        reveal: 'reveal 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards',
+      }
+    }
   },
   plugins: [],
 };
+
 export default config;

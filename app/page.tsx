@@ -1,32 +1,30 @@
+import React from 'react';
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import BestSellers from "@/components/BestSellers";
+import GenderSlider from "@/components/GenderSlider";
+import CategoryGrid from "@/components/CategoryGrid";
+import BrandEditorial from "@/components/BrandEditorial"; // Import the new section
 import { supplierProducts } from "@/data/products";
-import React from 'react';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-      {/* The main navigation bar */}
       <Navbar />
-
-      {/* Hero Section 
-          - Mobile Height: 500px 
-          - Tablet/Small Screen: 606px 
-          - Large Desktop: 750px
-      */}
       <Hero />
 
-      {/* Features Section 
-          - Fetches data from /src/data/products.ts
-          - Automatically sorts "NEW" products to the front
-          - Supports horizontal scroll with centered mobile cards
-      */}
       <div className="mt-4 md:mt-0">
         <BestSellers products={supplierProducts} />
       </div>
 
-      {/* Additional sections like a Footer would go here */}
+      <GenderSlider />
+
+      <CategoryGrid />
+
+      {/* The Brand Editorial Section */}
+      <BrandEditorial />
+
+      {/* Footer would follow here */}
     </main>
   );
 }
